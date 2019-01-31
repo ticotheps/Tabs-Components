@@ -18,10 +18,12 @@ class TabLink {
     console.log(this.tabItem);
     
     // Add a click event listener on this instance, calling the select method on click
-
+    element.addEventListener('click', () => this.select() ); 
   };
 
   select() {
+    console.log("The select() method was triggered by a click on the TabLink element!");
+    
     // Get all of the elements with the tabs-link class
     // const links;
 
@@ -39,7 +41,7 @@ class TabLink {
 class TabItem {
   constructor(element) {
     // Assign this.element to the passed in element
-    // this.element;
+    this.element = element;
   }
 
   select() {
